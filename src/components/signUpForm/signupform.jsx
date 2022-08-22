@@ -28,8 +28,6 @@ const SignUpForm = () => {
     setData({ ...data, [name]: value });
   };
 
-  // console.log(data);
-
   const handleSubmit = async (event) => {
     event.preventDefault();
 
