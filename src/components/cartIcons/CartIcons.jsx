@@ -1,8 +1,8 @@
 import React from "react";
-import "./cartIcons.scss";
 import { ReactComponent as ShoppingBag } from "../../assets/shopping-bag.svg";
 import { useContext } from "react";
 import { CartDropdownContext } from "../../context/cartDropdownContext";
+import {CartIconContainer , ItemCount } from './cartIconsStyles.jsx'
 
 const CartIcon = () => {
   const { isCartOpen, setIsCartOpen, cartCount } =
@@ -10,10 +10,10 @@ const CartIcon = () => {
   const toggleIsCartOpen = () => setIsCartOpen(!isCartOpen);
   return (
     <>
-      <div className="cart-icon-container " onClick={toggleIsCartOpen}>
-        <ShoppingBag className="shopping-icon" />
-        <span className="item-count">{cartCount}</span>
-      </div>
+      <CartIconContainer onClick={toggleIsCartOpen}>
+        <ShoppingBag style={{width : '24px' ,height : '24px'}}/>
+        <ItemCount className="item-count">{cartCount}</ItemCount>
+      </CartIconContainer>
     </>
   );
 };

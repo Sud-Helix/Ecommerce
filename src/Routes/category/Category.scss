@@ -1,3 +1,10 @@
+.category-title {
+  font-size: 28px;
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .category-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

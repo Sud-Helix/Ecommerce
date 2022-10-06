@@ -1,15 +1,15 @@
 import React from "react";
 import DirectoryItems from "../directoryItems/directoryItems";
-import "../directoryItems/directoryItems.scss";
-import "../directory/CategoryMenu.scss";
+import "../directoryItems/directoryItemsStyles.jsx";
+import {CategoryContainer} from './CategoryMenuStyles.jsx';
 
 const DirectoryMenu = ({ items }) => {
   return (
-    <div className="categories-container">
+    <CategoryContainer>
       {items.map((category) => (
         <DirectoryItems key={category.id} category={category} />
       ))}
-    </div>
+    </CategoryContainer>
   );
 };
 
