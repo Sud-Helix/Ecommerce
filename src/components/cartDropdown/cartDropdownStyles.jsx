@@ -29,3 +29,9 @@ export const NavItems = styled.div`
   flex-direction: column;
   overflow: scroll;
 `
+export const EmptyCartMessage = styled.span`
+margin:10px;
+justify-Content:center;
+align-items : center
+
+` 

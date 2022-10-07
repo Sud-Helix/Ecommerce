@@ -19,9 +19,11 @@ const CartDropdown = () => {
     <>
       <CartDropdownContainer>
         <NavItems>
-          {cartItems.map((item) => (
+          {cartItems.length ? (cartItems.map((item) => (
             <CartItems key={item.id} cartItem={item} />
-          ))}
+          ))):(
+            <span>OOPS...Sorry Nothing's in your Cart</span>
+          )}
         </NavItems>
         <Button onClick={gotoCheckoutHandler}>CHECKOUT</Button>
       </CartDropdownContainer>
